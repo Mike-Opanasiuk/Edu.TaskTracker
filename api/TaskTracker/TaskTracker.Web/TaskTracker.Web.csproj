@@ -18,4 +18,8 @@
     <None Include="D:\MyProjects\TaskTracker\TaskTracker\TaskTracker.Web\.editorconfig" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
 </Project>
