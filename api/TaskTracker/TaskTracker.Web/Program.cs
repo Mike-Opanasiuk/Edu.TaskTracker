@@ -39,6 +39,9 @@ if (app.Environment.IsDevelopment())
 using (IServiceScope scope = app.Services.CreateScope())
 {
     TaskTrackerDbContext dbContext = scope.ServiceProvider.GetRequiredService<TaskTrackerDbContext>();
+    UserManager<UserEntity> userManager = scope.ServiceProvider.GetRequiredService<UserManager<UserEntity>>();
+    RoleManager<RoleEntity> roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<RoleEntity>>();
+
     dbContext.Database.Migrate();
 }
 
