@@ -9,11 +9,10 @@ using Microsoft.AspNetCore.Identity;
 namespace TaskTracker.Data.Entities;
 public class UserEntity : IdentityUser<int>
 {
-    [Required, StringLength(100)]
-    public string FirstName { get; set; } = string.Empty;
-
-    [Required, StringLength(100)]
-    public string LastName { get; set; } = string.Empty;
+    [StringLength(100)]
+    public required string FirstName { get; set; }
+    [StringLength(100)]
+    public required string LastName { get; set; }
     public DateTime RegisterDate { get; set; }
     public ICollection<TaskEntity> Tasks { get; set; } = [];
 }
