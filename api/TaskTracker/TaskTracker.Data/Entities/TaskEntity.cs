@@ -11,9 +11,8 @@ namespace TaskTracker.Data.Entities;
 public class TaskEntity
 {
     public int Id { get; set; }
-    [Required]
-    public string Title { get; set; } = string.Empty;
-    public string Description { get; set; } = string.Empty;
+    public required string Title { get; set; }
+    public string? Description { get; set; }
     public TaskStatus Status { get; set; }
     public TaskPriority Priority { get; set; }
     public DateTime CreatedDate { get; set; }
