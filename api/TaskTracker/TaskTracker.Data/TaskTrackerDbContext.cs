@@ -9,12 +9,8 @@ using Microsoft.EntityFrameworkCore;
 using TaskTracker.Data.Entities;
 
 namespace TaskTracker.Data;
-public class TaskTrackerDbContext(DbContextOptions<TaskTrackerDbContext> options) : IdentityDbContext<IdentityUser<int>, IdentityRole<int>, int>(options)
+public class TaskTrackerDbContext(DbContextOptions<TaskTrackerDbContext> options) : IdentityDbContext<UserEntity, RoleEntity, int>(options)
 {
     public DbSet<TaskEntity> Tasks { get; set; }
     public DbSet<UserEntity> Users { get; set; }
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        base.OnModelCreating(modelBuilder);
-    }
 }

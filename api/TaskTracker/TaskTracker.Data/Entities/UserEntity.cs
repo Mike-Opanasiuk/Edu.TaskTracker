@@ -14,5 +14,5 @@ public class UserEntity : IdentityUser<int>
     [StringLength(100)]
     public required string LastName { get; set; }
     public DateTime RegisterDate { get; set; }
-    public ICollection<TaskEntity> Tasks { get; set; } = [];
+    public IList<TaskEntity> Tasks { get; set; } = [];
 }
