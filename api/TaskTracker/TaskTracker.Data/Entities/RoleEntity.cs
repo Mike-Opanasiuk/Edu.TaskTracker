@@ -8,5 +8,5 @@ using Microsoft.AspNetCore.Identity;
 namespace TaskTracker.Data.Entities;
 public class RoleEntity : IdentityRole<int>
 {
-    public IList<UserEntity> Users { get; set; } = [];
+    public List<UserEntity> Users { get; set; } = [];
 }
